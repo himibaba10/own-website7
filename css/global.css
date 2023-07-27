@@ -45,7 +45,8 @@ p {
 
 p,
 span,
-a {
+a,
+li {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
@@ -60,7 +61,7 @@ button {
 }
 
 .section {
-  max-width: 1650px;
+  max-width: 1450px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
