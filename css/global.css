@@ -67,6 +67,10 @@ button {
   margin-right: auto;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   .section {
     padding-left: 30px;
