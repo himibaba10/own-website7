@@ -622,11 +622,11 @@
   }
 
   #features-section .feature:nth-child(odd) .feature-info {
-    padding-right: 100px;
+    padding-right: 80px;
   }
 
   #features-section .feature:nth-child(even) .feature-info {
-    padding-left: 100px;
+    padding-left: 80px;
   }
 
   #features-section .feature .feature-image {
@@ -635,10 +635,6 @@
 
   #features-section .feature-info span {
     font-size: 18px;
-  }
-
-  #features-section .feature-info h2 {
-    font-size: 48px;
   }
 
   #features-section .feature-info p {
@@ -1091,8 +1087,12 @@
     margin-bottom: 20px;
   }
 
+  #hero-section .hero-image {
+    justify-content: center;
+  }
+
   #hero-section img {
-    width: 100%;
+    max-width: 500px;
   }
 
   /* Brand section */
@@ -1222,6 +1222,10 @@
   #why-us-section {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  #why-us-section .why-us-left h2 {
+    font-size: 30px;
   }
 
   #why-us-section .why-us-right {
