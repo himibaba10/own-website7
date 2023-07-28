@@ -17,6 +17,11 @@
   max-width: 110px;
 }
 
+#navbar #hamburger-icon {
+  display: none;
+  width: 29px;
+}
+
 #navbar #nav-links {
   list-style-type: none;
   display: flex;
@@ -41,8 +46,13 @@
   margin-left: auto;
   color: black;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 
+#navbar .clone-project-button:hover {
+  background: var(--brand-color-blue);
+  color: white;
+}
 /* Hero Section */
 #hero-section {
   background-image: url("../assets/hero-bg.png");
@@ -85,17 +95,32 @@
   padding: 15px 30px;
   border-radius: 5px;
   font-size: 16px;
-  border: none;
+  border-width: 2px;
+  border-style: solid;
   outline: none;
+  transition: all 0.3s ease-in-out;
 }
 
 #hero-section .button1 {
   background-color: var(--brand-color-blue);
+  border-color: var(--brand-color-blue);
   color: white;
+}
+
+#hero-section .button1:hover {
+  background-color: transparent;
+  color: black;
 }
 
 #hero-section .button2 {
   background-color: transparent;
+  border-color: transparent;
+}
+
+#hero-section .button2:hover {
+  background-color: var(--brand-color-blue);
+  border-color: var(--brand-color-blue);
+  color: white;
 }
 
 /* Brand section */
@@ -268,7 +293,7 @@
 }
 
 #features-section .feature-info span {
-  font-size: 16px;
+  font-size: 18px;
   color: #232ed1;
 }
 
@@ -384,10 +409,13 @@
   line-height: 125%;
 }
 
-#faq-section .faq p {
+#faq-section .faq .faq-answer {
   font-size: 16px;
   margin-bottom: 16px;
   color: var(--grey);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
 }
 
 /* Footer - Get started */
@@ -634,10 +662,6 @@
 
   #features-section .feature .feature-image {
     padding: 100px;
-  }
-
-  #features-section .feature-info span {
-    font-size: 18px;
   }
 
   #features-section .feature-info p {
@@ -1053,19 +1077,38 @@
   /* Navbar */
   #navbar {
     margin-top: 20px;
+    justify-content: space-between;
   }
 
   #navbar img {
     max-width: 80px;
   }
 
+  #navbar #hamburger-icon {
+    display: block;
+  }
+
   #navbar #nav-links {
     display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 10px 0;
+    transition: height 0.3s linear;
+  }
+
+  #navbar #nav-links li {
+    padding: 6px 0;
   }
 
   #navbar .clone-project-button {
     padding: 12px 25px;
     font-size: 14px;
+    display: none;
   }
 
   /* Hero Section */
@@ -1269,6 +1312,10 @@
   }
 
   #faq-section .faq p {
+    font-size: 14px;
+  }
+
+  #faq-section .faq .faq-answer {
     font-size: 14px;
   }
 

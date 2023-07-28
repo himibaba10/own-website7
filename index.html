@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/utils.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <title>Client-First Template 1</title>
   </head>
   <body>
@@ -27,6 +29,38 @@
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/blog.html">Blog</a></li>
         </ul>
+        <div id="hamburger-icon">
+          <script>
+            let icon = document.getElementById("hamburger-icon");
+            let navLinks = document.getElementById("nav-links");
+            let animation = bodymovin.loadAnimation({
+              container: icon,
+              path: "./assets/hamburger icon.json",
+              render: "svg",
+              loop: false,
+              autoplay: false,
+              name: "hamburger menu",
+            });
+            icon.onclick = () => {
+              if (!icon.className.includes("active")) {
+                icon.classList.add("active");
+                animation.play();
+                navLinks.style.display = "block";
+                setTimeout(() => {
+                  animation.pause();
+                }, 500);
+              } else {
+                animation.play();
+                icon.classList.remove("active");
+                navLinks.style.display = "none";
+                setTimeout(() => {
+                  animation.stop();
+                  navLinks.style.display = "none";
+                }, 500);
+              }
+            };
+          </script>
+        </div>
         <a href="#" class="clone-project-button">Clone Project</a>
       </nav>
     </header>
@@ -238,7 +272,7 @@
         <h2>FAQ</h2>
         <div class="faq-wrapper">
           <div class="faq">
-            <span class="faq-number active">01</span>
+            <span class="faq-number">01</span>
             <div class="faq-info">
               <h3 class="faq-question">
                 Maecenas efficitur scelerisque lorem?
@@ -256,6 +290,11 @@
               <h3 class="faq-question">
                 Pellentesque ultricies nulla sit amet ipsum kra pellentesque?
               </h3>
+              <p class="faq-answer">
+                Nillam bibendum diam diam, maximus malesuada tortor volutpat sit
+                amet. Curabitur volutpat feugiat tellus, sit amet faucibus massa
+                vulputate lobortis. Vestibulum malesuada ex dolor,
+              </p>
             </div>
           </div>
           <div class="faq">
@@ -264,6 +303,11 @@
               <h3 class="faq-question">
                 Nullam bibendum diam diam, maximus malesuada?
               </h3>
+              <p class="faq-answer">
+                Nillam bibendum diam diam, maximus malesuada tortor volutpat sit
+                amet. Curabitur volutpat feugiat tellus, sit amet faucibus massa
+                vulputate lobortis. Vestibulum malesuada ex dolor,
+              </p>
             </div>
           </div>
           <div class="faq">
@@ -272,6 +316,11 @@
               <h3 class="faq-question">
                 Vivamus eleifend nec felis vel auctor?
               </h3>
+              <p class="faq-answer">
+                Nillam bibendum diam diam, maximus malesuada tortor volutpat sit
+                amet. Curabitur volutpat feugiat tellus, sit amet faucibus massa
+                vulputate lobortis. Vestibulum malesuada ex dolor,
+              </p>
             </div>
           </div>
           <div class="faq">
@@ -280,6 +329,11 @@
               <h3 class="faq-question">
                 Vivamus eleifend nec felis vel auctor?
               </h3>
+              <p class="faq-answer">
+                Nillam bibendum diam diam, maximus malesuada tortor volutpat sit
+                amet. Curabitur volutpat feugiat tellus, sit amet faucibus massa
+                vulputate lobortis. Vestibulum malesuada ex dolor,
+              </p>
             </div>
           </div>
         </div>
@@ -342,5 +396,8 @@
         <span>© Copyright Unsaas 2021</span>
       </div>
     </footer>
+
+    <!-- JS for accordion -->
+    <script src="./js/faq-accordion.js"></script>
   </body>
 </html>
