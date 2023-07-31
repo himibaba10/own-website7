@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
     <!-- CSS file for only this page -->
     <link rel="stylesheet" href="./css/product.css" />
     <title>Product</title>
@@ -32,6 +34,38 @@
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/blog.html">Blog</a></li>
         </ul>
+        <div id="hamburger-icon">
+          <script>
+            let icon = document.getElementById("hamburger-icon");
+            let navLinks = document.getElementById("nav-links");
+            let animation = bodymovin.loadAnimation({
+              container: icon,
+              path: "./assets/hamburger icon.json",
+              render: "svg",
+              loop: false,
+              autoplay: false,
+              name: "hamburger menu",
+            });
+            icon.onclick = () => {
+              if (!icon.className.includes("active")) {
+                icon.classList.add("active");
+                animation.play();
+                navLinks.style.display = "block";
+                setTimeout(() => {
+                  animation.pause();
+                }, 500);
+              } else {
+                animation.play();
+                icon.classList.remove("active");
+                navLinks.style.display = "none";
+                setTimeout(() => {
+                  animation.stop();
+                  navLinks.style.display = "none";
+                }, 500);
+              }
+            };
+          </script>
+        </div>
         <a href="#" class="clone-project-button">Clone Project</a>
       </nav>
     </header>

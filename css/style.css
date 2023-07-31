@@ -11,6 +11,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  z-index: 9999;
 }
 
 #navbar img {
@@ -1073,6 +1074,7 @@
   }
 }
 
+/* Mobile Landscape */
 @media (max-width: 767px) {
   /* Navbar */
   #navbar {
@@ -1264,6 +1266,7 @@
   }
 }
 
+/* Mobile Portrait */
 @media (max-width: 478px) {
   /* Why us section */
   #why-us-section {

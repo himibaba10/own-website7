@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/9ccc5632da.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+    <!-- CSS file for only this page -->
+    <link rel="stylesheet" href="./css/about-us.css" />
+
+    <title>About Us</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar" class="section">
+        <a href="/"><img src="./assets/Logo.svg" alt="" /></a>
+        <ul id="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/product.html">Product</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+        </ul>
+        <div id="hamburger-icon">
+          <script>
+            let icon = document.getElementById("hamburger-icon");
+            console.log("hi");
+            let navLinks = document.getElementById("nav-links");
+            let animation = bodymovin.loadAnimation({
+              container: icon,
+              path: "./assets/hamburger icon.json",
+              render: "svg",
+              loop: false,
+              autoplay: false,
+              name: "hamburger menu",
+            });
+            icon.onclick = () => {
+              console.log("hi agaib");
+              if (!icon.className.includes("active")) {
+                icon.classList.add("active");
+                animation.play();
+                navLinks.style.display = "block";
+                setTimeout(() => {
+                  animation.pause();
+                }, 500);
+              } else {
+                animation.play();
+                icon.classList.remove("active");
+                navLinks.style.display = "none";
+                setTimeout(() => {
+                  animation.stop();
+                  navLinks.style.display = "none";
+                }, 500);
+              }
+            };
+          </script>
+        </div>
+        <a href="#" class="clone-project-button">Clone Project</a>
+      </nav>
+    </header>
+    <main>
+      <section id="hero-section" class="about-us margin-bottom">
+        <div class="hero-grid section">
+          <div class="hero-info">
+            <h1>About Us</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur dipiscing elit. Vestibulum
+              vitae nunc vitae neque .
+            </p>
+          </div>
+          <img src="./assets/about us hero image.svg" alt="" />
+        </div>
+      </section>
+      <section id="about-us-main" class="section">
+        <h2>Finsweet</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nulla
+          eu lorem rutrum tempus. Integer tincidunt tellus quis est tincidunt
+          auctor.
+        </p>
+        <div class="about-us-main-img">
+          <img src="./assets/about us main image.jpg" alt="" />
+          <div class="blue-box"></div>
+          <div class="orange-box"></div>
+        </div>
+        <p>
+          Phasellus scelerisque eros felis, ut lobortis ipsum mattis
+          ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed
+          dolor. Pellentesque facilisis condimentum nunc, nec placerat eros
+          aliquam lobortis. Nullam non bibendum neque, nec sagittis risus. Proin
+          est metus, bibendum at maximus quis, placerat id sapien. Fusce ipsum
+          quam, placerat sit amet mauris vitae, suscipit ultrices turpis. Etiam
+          ac eros est. Quisque id rhoncus dolor, eget gravida ante. Integer
+          commodo id lacus at fringilla.
+        </p>
+        <p>
+          Phasellus scelerisque eros felis, ut lobortis ipsum mattis
+          ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed
+          dolor. Pellentesque facilisis
+        </p>
+      </section>
+      <section id="team-section" class="section margin-bottom">
+        <div class="team-info">
+          <h2>Our Team</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur dipiscing elit.</p>
+        </div>
+        <div class="team-member-grid">
+          <div class="team-member">
+            <img src="./assets/team member 1.png" alt="" />
+            <span>CEO</span>
+            <h3>Drogo Blake</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./assets/team member 2.png" alt="" />
+            <span>Co-Founder</span>
+            <h3>Taylor Rose</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./assets/team member 3.png" alt="" />
+            <span>Head of Marketing</span>
+            <h3>Page Ortega</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./assets/team member 4.png" alt="" />
+            <span>Head of Design</span>
+            <h3>Aubrey Harris</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./assets/team member 5.png" alt="" />
+            <span>Marketer</span>
+            <h3>Isabella Bradley</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./assets/team member 6.png" alt="" />
+            <span>Sales Manager</span>
+            <h3>Basil Rice</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="footer-get-started-wrapper">
+        <div class="orange-box"></div>
+        <div class="get-started section">
+          <h2>Get started<br />with Finsweet today</h2>
+          <a href="#" class="orange-button">View Pricing</a>
+        </div>
+        <div class="blue-box"></div>
+      </div>
+      <div id="footer-bg">
+        <div class="section">
+          <div id="footer-link-wrapper">
+            <div class="social-links">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="footer-links">
+              <span>Company</span>
+              <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <span>Legal</span>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">404</a></li>
+                <li><a href="#">Protected Page</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <span>Reach Us</span>
+              <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">himibaba@gmail.com</a></li>
+                <li><a href="#">019*******</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="footer-newsletter">
+            <span>398 11th St, San Francisco</span>
+            <form action="#" id="newsletter-form">
+              <input type="email" name="email" id="email" />
+              <button type="submit" class="submit-button">
+                Subscribe to our newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="footer-copyright">
+        <span>© Copyright Unsaas 2021</span>
+      </div>
+    </footer>
+  </body>
+</html>
