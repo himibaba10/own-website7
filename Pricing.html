@@ -69,6 +69,19 @@
       </nav>
     </header>
     <main>
+      <section id="loader-section">
+        <div id="loader">
+          <script>
+            const loader = document.getElementById("loader");
+            let loaderAnimation = bodymovin.loadAnimation({
+              container: loader,
+              path: "./assets/Loader.json",
+              render: "svg",
+              name: "hamburger menu",
+            });
+          </script>
+        </div>
+      </section>
       <section id="hero-section" class="pricing-hero">
         <div class="hero-grid section">
           <div class="hero-info">
@@ -252,25 +265,25 @@
             <div class="footer-links">
               <span>Company</span>
               <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="./product.html">Product</a></li>
+                <li><a href="./Pricing.html">Pricing</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
               </ul>
             </div>
             <div class="footer-links">
               <span>Legal</span>
               <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">404</a></li>
+                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="./404.html">404</a></li>
                 <li><a href="#">Protected Page</a></li>
               </ul>
             </div>
             <div class="footer-links">
               <span>Reach Us</span>
               <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">himibaba@gmail.com</a></li>
-                <li><a href="#">019*******</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><span>himibaba@gmail.com</span></li>
+                <li><span>019*******</span></li>
               </ul>
             </div>
           </div>
@@ -289,5 +302,10 @@
         <span>© Copyright Unsaas 2021</span>
       </div>
     </footer>
+
+    <!-- JS for navbar -->
+    <script src="./js/script.js"></script>
+    <!-- JS for loading state-->
+    <script src="./js/loading.js"></script>
   </body>
 </html>

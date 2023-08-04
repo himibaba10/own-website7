@@ -1,0 +1,158 @@
+#contact-section {
+  max-width: 1150px;
+  margin: 0 auto 150px;
+  padding: 230px 50px 0;
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  grid-gap: 40px;
+}
+
+.contact-info img {
+  max-width: 75px;
+  height: auto;
+}
+
+.contact-info h1 {
+  font-size: 55px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.contact-info span {
+  font-size: 20px;
+  color: var(--grey);
+}
+
+.contact-form span {
+  font-size: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.contact-form form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(159, 160, 184, 0.4);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  resize: none;
+}
+
+.contact-form form input:nth-child(1),
+.contact-form form input:nth-child(2) {
+  max-width: calc(50% - 7.5px);
+}
+
+.contact-form form button {
+  text-align: center;
+  width: 100%;
+  background: var(--brand-color-orange);
+  padding: 15px;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.contact-form form ::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--grey);
+}
+
+@media (min-width: 1280px) {
+  .contact-info h1 {
+    font-size: 64px;
+  }
+
+  .contact-info span {
+    font-size: 24px;
+  }
+
+  .contact-form span {
+    font-size: 24px;
+  }
+
+  .contact-form form {
+    gap: 24px;
+  }
+
+  .contact-form form input,
+  .contact-form textarea {
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .contact-form form input:nth-child(1),
+  .contact-form form input:nth-child(2) {
+    max-width: calc(50% - 12px);
+  }
+
+  .contact-form form button {
+    padding: 23px;
+  }
+
+  .contact-form form ::placeholder {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  #contact-section {
+    margin: 0 auto 80px;
+    padding-top: 150px;
+  }
+
+  .contact-info img {
+    max-width: 60px;
+  }
+
+  .contact-info h1 {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info span {
+    font-size: 16px;
+  }
+
+  .contact-form form button {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  #contact-section {
+    grid-template-columns: 1fr;
+    margin: 0 auto 50px;
+    padding-top: 100px;
+  }
+
+  .contact-info h1 {
+    margin-bottom: 5px;
+  }
+
+  .contact-form form {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 478px) {
+  #contact-section {
+    padding: 70px 10px 0;
+  }
+
+  .contact-form form input:nth-child(1),
+  .contact-form form input:nth-child(2) {
+    max-width: unset;
+  }
+}

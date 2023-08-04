@@ -17,9 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 
     <!-- CSS file for only this page -->
-    <link rel="stylesheet" href="./css/about-us.css" />
-
-    <title>About Us</title>
+    <link rel="stylesheet" href="./css/contact.css" />
+    <title>Contact Us</title>
   </head>
   <body>
     <header>
@@ -36,7 +35,6 @@
         <div id="hamburger-icon">
           <script>
             let icon = document.getElementById("hamburger-icon");
-            console.log("hi");
             let navLinks = document.getElementById("nav-links");
             let animation = bodymovin.loadAnimation({
               container: icon,
@@ -47,7 +45,6 @@
               name: "hamburger menu",
             });
             icon.onclick = () => {
-              console.log("hi agaib");
               if (!icon.className.includes("active")) {
                 icon.classList.add("active");
                 animation.play();
@@ -84,112 +81,22 @@
           </script>
         </div>
       </section>
-      <section id="hero-section" class="about-us margin-bottom">
-        <div class="hero-grid section">
-          <div class="hero-info">
-            <h1>About Us</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur dipiscing elit. Vestibulum
-              vitae nunc vitae neque .
-            </p>
-          </div>
-          <img src="./assets/about us hero image.svg" alt="" />
+      <section id="contact-section">
+        <div class="contact-info">
+          <img src="./assets/Contact page shapes.png" alt="" />
+          <h1>Get in touch with us</h1>
+          <span>398 11th St, San Francisco</span>
         </div>
-      </section>
-      <section id="about-us-main" class="section">
-        <h2>Finsweet</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nulla
-          eu lorem rutrum tempus. Integer tincidunt tellus quis est tincidunt
-          auctor.
-        </p>
-        <div class="about-us-main-img">
-          <img src="./assets/about us main image.jpg" alt="" />
-          <div class="blue-box"></div>
-          <div class="orange-box"></div>
-        </div>
-        <p>
-          Phasellus scelerisque eros felis, ut lobortis ipsum mattis
-          ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed
-          dolor. Pellentesque facilisis condimentum nunc, nec placerat eros
-          aliquam lobortis. Nullam non bibendum neque, nec sagittis risus. Proin
-          est metus, bibendum at maximus quis, placerat id sapien. Fusce ipsum
-          quam, placerat sit amet mauris vitae, suscipit ultrices turpis. Etiam
-          ac eros est. Quisque id rhoncus dolor, eget gravida ante. Integer
-          commodo id lacus at fringilla.
-        </p>
-        <p>
-          Phasellus scelerisque eros felis, ut lobortis ipsum mattis
-          ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed
-          dolor. Pellentesque facilisis
-        </p>
-      </section>
-      <section id="team-section" class="section margin-bottom">
-        <div class="team-info">
-          <h2>Our Team</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur dipiscing elit.</p>
-        </div>
-        <div class="team-member-grid">
-          <div class="team-member">
-            <img src="./assets/team member 1.png" alt="" />
-            <span>CEO</span>
-            <h3>Drogo Blake</h3>
-            <div class="social-icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
-          </div>
-          <div class="team-member">
-            <img src="./assets/team member 2.png" alt="" />
-            <span>Co-Founder</span>
-            <h3>Taylor Rose</h3>
-            <div class="social-icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
-          </div>
-          <div class="team-member">
-            <img src="./assets/team member 3.png" alt="" />
-            <span>Head of Marketing</span>
-            <h3>Page Ortega</h3>
-            <div class="social-icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
-          </div>
-          <div class="team-member">
-            <img src="./assets/team member 4.png" alt="" />
-            <span>Head of Design</span>
-            <h3>Aubrey Harris</h3>
-            <div class="social-icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
-          </div>
-          <div class="team-member">
-            <img src="./assets/team member 5.png" alt="" />
-            <span>Marketer</span>
-            <h3>Isabella Bradley</h3>
-            <div class="social-icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
-          </div>
-          <div class="team-member">
-            <img src="./assets/team member 6.png" alt="" />
-            <span>Sales Manager</span>
-            <h3>Basil Rice</h3>
-            <div class="social-icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
-          </div>
+        <div class="contact-form">
+          <span>We will get back to you as soon as possible.</span>
+          <form>
+            <input type="text" placeholder="Full Name" />
+            <input type="text" placeholder="Company Name" />
+            <input type="email" placeholder="Work Email" />
+            <input type="text" placeholder="Subject" />
+            <textarea cols="30" rows="6" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </section>
     </main>

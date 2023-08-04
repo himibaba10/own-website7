@@ -90,6 +90,7 @@
   border-radius: 7px;
   margin-top: auto;
   font-size: 24px;
+  transition: all 0.3s linear;
 }
 
 #pricing-section .pricing:nth-child(odd) button {
@@ -98,10 +99,22 @@
   background: transparent;
 }
 
+#pricing-section .pricing:nth-child(odd) button:hover {
+  color: white;
+  border-color: transparent;
+  background: var(--brand-color-blue);
+}
+
 #pricing-section .pricing:nth-child(even) button {
   color: white;
   border: 2px solid transparent;
   background: var(--brand-color-orange);
+}
+
+#pricing-section .pricing:nth-child(even) button:hover {
+  color: var(--brand-color-orange);
+  border-color: var(--brand-color-orange);
+  background: white;
 }
 
 @media (min-width: 1280px) {
